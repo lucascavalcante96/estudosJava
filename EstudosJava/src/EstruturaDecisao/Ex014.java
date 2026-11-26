@@ -13,16 +13,20 @@ public class Ex014 {
         System.out.println("Digite o terceiro lado do triangulo: ");
         double lado3 = sc.nextDouble();
 
-        if (lado1 + lado2 > lado3 || lado2 + lado3 > lado1 || lado1 + lado3 > lado2) {
-            if (lado1 == lado2 && lado2 == lado3) {
+        if (lado1 + lado2 > lado3 && lado2 + lado3 > lado1 && lado1 + lado3 > lado2) {
+            if (lado1 == lado2 && lado1 == lado3) {
                 System.out.println("Triangulo Equilátero");
             }
-            else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
+            else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
                 System.out.println("Triangulo Isóceles");
             }
+            else {
+                System.out.println("Triangulo Escaleno");
+            }
         }
-
-
+        else {
+            System.out.println("Os valores informados nao formam um triangulo.");
+        }
         sc.close();
     }
 }
